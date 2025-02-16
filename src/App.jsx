@@ -4,6 +4,8 @@ import About from "./about/about.jsx"
 import CommentCard from "./commentCards/commentCard.jsx";
 import Footer from "./footer/footer.jsx"
 
+import styles from "./home.module.css";
+
 const data = [
   {
       comment : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse aliquid amet odit unde adipisci, quisquam odio, nostrum quod laudantium illo itaque molestiae dolores excepturi. Earum enim rem quo nostrum quasi veniam molestias facilis! Corrupti autem quas nisi consectetur nesciunt provident.',
@@ -52,12 +54,14 @@ function App() {
       <hr/>
       <About/>
       <hr/>
-      <ul>
-        {data.map((ele,idx) =>(
-          // console.log(ele);
-          <CommentCard key={idx} currData ={ele}/>
-        ))}
-      </ul>
+      <div className={styles["cards-comment"]}>
+        {
+          data.map((ele,idx) =>(
+            // console.log(ele);
+            <CommentCard key={idx} currData ={ele}/>
+          ))
+        }
+      </div>
       <hr/>
       <Footer/>
 
