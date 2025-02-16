@@ -1,10 +1,13 @@
-
+import styles from "./navbar.module.css";
 const Navbar =() =>{
     return(
-        <>
-         <div className="logo"></div>
-         <div>
-            <ul>
+        <nav>
+         <div className={styles.logo}>
+            <img src="https://flowbite.com/docs/images/logo.svg"/>
+            <span className={styles.logoName}>GeeksFood</span>
+         </div>
+         <div className="navList">
+            <ul className={styles.ulClass}>
                 <li>Home</li>
                 <li>Quote</li>
                 <li>Restaurants</li>
@@ -12,10 +15,10 @@ const Navbar =() =>{
                 <li>Contacts</li>
             </ul>
          </div>
-         <div>
+         <div className={styles.buttons}>
             <button>Get Started</button>
          </div>
-        </>
+        </nav>
     )
 }
 
